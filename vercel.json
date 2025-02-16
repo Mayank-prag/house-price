@@ -1,13 +1,7 @@
 {
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/app.py"
-    }
-  ],
   "builds": [
     {
-      "src": "api/app.py",
+      "src": "app.py",
       "use": "@vercel/python",
       "config": {
         "includeFiles": ["requirements.txt"]
