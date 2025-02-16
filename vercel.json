@@ -1,12 +1,18 @@
 {
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/app.py"
+    }
+  ],
   "builds": [
     {
-      "src": "app.py",
+      "src": "api/app.py",
       "use": "@vercel/python",
       "config": {
-        "includeFiles": ["requirements.txt"]
+        "includeFiles": ["install.sh"]
       }
     }
   ],
-  "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt"
+  "buildCommand": "sh install.sh"
 }
