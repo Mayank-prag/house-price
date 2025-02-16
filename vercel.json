@@ -1,16 +1,19 @@
 {
-  "functions": {
-    "api/app.py": {
-      "runtime": "python@3.12"
-    }
-  },
+  "version": 2,
+  "public": false,
   "builds": [
     {
       "src": "api/app.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.12"
+        "runtime": "python@3.12"
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/app.py"
     }
   ]
 }
