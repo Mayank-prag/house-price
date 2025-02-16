@@ -8,7 +8,7 @@ import math
 import os
 
 # Ensure the file exists
-file_path = r'api/clean_dataset.pkl'
+file_path = r'clean_dataset.pkl'
 if not os.path.exists(file_path):
     raise FileNotFoundError(f"File {file_path} does not exist.")
 
