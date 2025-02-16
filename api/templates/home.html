@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000, #222, #000);
+            background-size: 200% 200%;
+            animation: curtain 3s infinite;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .header {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+        }
+        .intro {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 600px;
+        }
+        .button {
+            padding: 20px 40px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #ff5733;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #e74c3c;
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8em;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes curtain {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Welcome to House Price Finder</div>
+    <div class="intro">Discover the value of your dream house with just one click. Get accurate and up-to-date house prices instantly.</div>
+    <a href="/house_price_input" class="button">Get House Price</a>
+    <div class="footer">© 2025 House Price Finder. All rights reserved.</div>
+</body>
+</html>
+
