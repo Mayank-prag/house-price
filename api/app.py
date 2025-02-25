@@ -9,13 +9,13 @@ app.secret_key = 'supersecretkey'  # Needed for flash messages
 def home():
     if request.method == "POST":
         return redirect(url_for("house_price_input"))
-    return render_template("api/templates/home.html")
+    return render_template("home.html")
 
 @app.route('/house_price_input', methods=["GET","POST"])
 def house_price_input():
     if request.method == "POST":
         return redirect(url_for("submit"))
-    return render_template('api/templates/house_price_input.html')
+    return render_template('house_price_input.html')
 
 @app.route('/submit', methods=["POST"])
 def submit():
@@ -57,7 +57,7 @@ def index():
     noBathrooms = request.args.get('noBathrooms')
     predicted_price = request.args.get('predicted_price')
 
-    return render_template('api/templates/index.html', user_name=user_name, location=location, sqrft=sqrft, bhk=bhk, noBathrooms=noBathrooms, predicted_price=predicted_price)
+    return render_template('index.html', user_name=user_name, location=location, sqrft=sqrft, bhk=bhk, noBathrooms=noBathrooms, predicted_price=predicted_price)
 
 # if __name__ == '__main__':
 #     app.run()
